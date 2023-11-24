@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Pessoas</title>
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <link rel="shortcut icon" href="../../imagens/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="../../imagens/logo.png" alt="Logo" />
+      <nav>
+        <a href="MenuPessoas.html">Voltar</a>
+      </div>
+    </header>
+  
+    <main>
+      
+      <form id="formulario" action="" method="post">
+        <h2>Cadastrar Pessoas</h2>
+        <label for="NomePessoas">Nome:</label><br />
+        <input type="text" id="NomePessoas" /><br />
+
+        <label for="EmailPessoas">Email:</label><br />
+        <input type="email" id="EmailPessoas"  /><br />
+        
+        <label for="SenhaPessoas">Senha:</label><br />
+        <input type="password" id="SenhaPessoas"/><br />
+
+        <label for="SenhaPessoasConfirm">Confirmar Senha:</label><br />
+        <input type="password" id="SenhaPessoasConfirm"/><br />
+
+        <label for="TelefonePessoas">Telefone</label><br />
+        <input type="tel" id="TlefonePessoas"/><br />
+
+        <label for="CpfPessoas">CPF:</label><br />
+        <input type="text" id="CpfPessoas"/><br />
+
+        <label for="EnderecoPessoas">Endereço:</label><br />
+        <input type="text" id="EnderecoPessoas"/><br />
+
+        <label for="SituacaoPessoas">Situação:</label>
+        <select id="SituacaoPessoas">
+          <option value="" selected>Selecione</option>
+          <option value="opcao1">A</option>
+          <option value="opcao2">I</option>
+        </select>
+        
+          
+        <input type="submit" value="Enviar" />
+      </form>
+      
+    </main>
+
+    <footer class="rodape2">Copyright © Crie_TI</footer>
+  </body>
+</html>
