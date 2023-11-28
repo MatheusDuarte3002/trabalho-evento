@@ -14,6 +14,7 @@ async function validarPayload(
     email: yup.string().email().required(),
     senha: yup.string().min(6).max(16).required(),
     telefone: yup.string().min(6).max(16).required(),
+    genero:yup.string().max(9).required(),
     cpf: yup.string().min(11).max(11).required(),
     endereco: yup.string().min(3).max(255).required(),
   });

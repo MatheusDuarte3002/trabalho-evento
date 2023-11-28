@@ -23,6 +23,7 @@ export class UsuariosController {
       email: body.email,
       senha: senha,
       telefone: body.telefone,
+      genero: body.genero,
       cpf: body.cpf,
       endereco: body.endereco,
       situacao: true
@@ -43,6 +44,7 @@ export class UsuariosController {
       (usuario.email = body.email),
       (usuario.senha = senha),
       (usuario.telefone = body.telefone),
+      (usuario.genero = body.genero)
       (usuario.cpf = body.cpf),
       (usuario.endereco = body.endereco),
       (usuario.situacao = body.situacao),

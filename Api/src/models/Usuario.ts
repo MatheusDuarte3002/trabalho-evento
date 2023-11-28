@@ -18,6 +18,9 @@ export class Usuario extends BaseEntity {
   public telefone: string;
 
   @Column()
+  public genero: string;
+
+  @Column()
   public cpf: string;
 
   @Column()
