@@ -42,9 +42,9 @@ export class UsuariosController {
 
     (usuario.nome = body.nome),
       (usuario.email = body.email),
-      (usuario.senha = senha),
+      (usuario.senha = body.senha),
       (usuario.telefone = body.telefone),
-      (usuario.genero = body.genero)
+      (usuario.genero = body.genero),
       (usuario.cpf = body.cpf),
       (usuario.endereco = body.endereco),
       (usuario.situacao = body.situacao),
@@ -63,4 +63,5 @@ export class UsuariosController {
     return res.status(200).json();
   }
 }
+
 
