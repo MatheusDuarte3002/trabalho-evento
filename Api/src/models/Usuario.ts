@@ -1,4 +1,5 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Inscricao } from "./Inscricao";
 
 @Entity("usuarios")
 export class Usuario extends BaseEntity {
@@ -24,11 +25,11 @@ export class Usuario extends BaseEntity {
   public cpf: string;
 
   @Column()
-  public tipo: string;
-
-  @Column()
   public endereco: string;
 
   @Column()
   public situacao: boolean;
+
+  @OneToMany(() => Inscricao, inscricao => inscricao.usuario)
+  public inscricoes: Inscricao[];
 }

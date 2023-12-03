@@ -4,6 +4,7 @@ import { basicAuth } from "./middlewares/basic-auth";
 import autenticacaoRoutes from "./routes/autenticacao";
 import usuariosRoutes from "./routes/usuarios";
 import eventosRoutes from "./routes/eventos";
+import inscricoesRoutes from "./routes/inscricoes";
 
 let server: Express = express();
 let port: number = Number(process.env.SERVER_PORT || 3000);
@@ -13,6 +14,8 @@ server.use(express.json());
 server.use(autenticacaoRoutes);
 server.use(usuariosRoutes);
 server.use(eventosRoutes);
+server.use(inscricoesRoutes);
+
 
 
 export default {

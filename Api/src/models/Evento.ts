@@ -1,4 +1,5 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Inscricao } from "./Inscricao";
 
 @Entity("eventos")
 export class Evento extends BaseEntity {
@@ -34,4 +35,8 @@ export class Evento extends BaseEntity {
 
   @Column()
   public situacao: boolean;
+
+  @OneToMany(() => Inscricao, inscricao => inscricao.evento)
+  public inscricoes: Inscricao[];
 }
+
