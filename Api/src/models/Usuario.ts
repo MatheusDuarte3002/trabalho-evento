@@ -24,6 +24,9 @@ export class Usuario extends BaseEntity {
   public cpf: string;
 
   @Column()
+  public tipo: string;
+
+  @Column()
   public endereco: string;
 
   @Column()

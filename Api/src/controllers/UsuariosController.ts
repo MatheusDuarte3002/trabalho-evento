@@ -25,6 +25,7 @@ export class UsuariosController {
       telefone: body.telefone,
       genero: body.genero,
       cpf: body.cpf,
+      tipo: body.tipo,
       endereco: body.endereco,
       situacao: true
     }).save();
@@ -46,6 +47,7 @@ export class UsuariosController {
       (usuario.telefone = body.telefone),
       (usuario.genero = body.genero),
       (usuario.cpf = body.cpf),
+      (usuario.tipo= body.tipo),
       (usuario.endereco = body.endereco),
       (usuario.situacao = body.situacao),
 

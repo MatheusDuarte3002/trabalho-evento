@@ -16,6 +16,7 @@ async function validarPayload(
     telefone: yup.string().min(6).max(16).required(),
     genero:yup.string().max(9).required(),
     cpf: yup.string().min(11).max(11).required(),
+    tipo: yup.string().required(),
     endereco: yup.string().min(3).max(255).required(),
   });
 
