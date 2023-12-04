@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listar Administradores</title>
     <link rel="stylesheet" href="../../styles/styles.css" />
-    <link rel="shortcut icon" href="../../imagens/logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../../imagens/logo.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,30 +22,33 @@
       <img src="../../imagens/logo.png" alt="Logo" />
       <nav>
         <a href="MenuDeAdministradores.html">Voltar</a>
-      </div>
+      </nav>
     </header>
-  
+
     <main>
-        <div id="menulistar" class="row">
-            <div class="column2">
-                
-                <h1>Lista de Administradores</h1>
-                    <table class="table-listaradmin">
-                        <tr>
-                          <th>Nome</th>
-                          <th>Email</th>
-                          <th>Telefone</th>
-                          <th>CPF</th>
-                          <th>Endereço</th>
-                          <th>Situação</th>
-                        </tr>
-                    </table>      
-          </div>
-      
+      <div id="menulistar" class="row">
+        <div class="column2">
+          <h1>Lista de Administradores</h1>
+          <table class="table-listaradmin">
+            <tr class="caixa-admin">
+              <th class="campos-admin">Nome</th>
+              <th class="campos-admin">Email</th>
+              <th class="campos-admin">Telefone</th>
+              <th class="campos-admin">CPF</th>
+              <th class="campos-admin">Endereço</th>
+              <th class="campos-admin">Tipo</th>
+              <th class="campos-admin">Situação</th>
+              <th class="campos-admin">Excluir</th>
+            </tr>
+          </table>
+          <br>
+          <button class="csv">Exportar para CSV</button>
+        </div>
+      </div>
+
       <footer class="rodape">Copyright © Crie_TI</footer>
     </main>
 
     <script src="ListarAdmin.js"></script>
-
   </body>
 </html>

@@ -26,33 +26,36 @@
       <form id="formulario" action="" method="post">
         <h2>Cadastrar Pessoas</h2>
         <label for="NomePessoas">Nome:</label><br />
-        <input type="text" id="NomePessoas" /><br />
+      <input type="text" id="NomePessoas" required /><br />
 
-        <label for="EmailPessoas">Email:</label><br />
-        <input type="email" id="EmailPessoas"  /><br />
-        
-        <label for="SenhaPessoas">Senha:</label><br />
-        <input type="password" id="SenhaPessoas"/><br />
+      <label for="EmailPessoas">Email:</label><br />
+      <input type="email" id="EmailPessoas" required /><br />
 
-        <label for="SenhaPessoasConfirm">Confirmar Senha:</label><br />
-        <input type="password" id="SenhaPessoasConfirm"/><br />
+      <label for="SenhaPessoas">Senha:</label><br />
+      <input type="password" id="SenhaPessoas" required /><br />
 
-        <label for="TelefonePessoas">Telefone</label><br />
-        <input type="tel" id="TlefonePessoas"/><br />
+      <label for="SenhaPessoasConfirm">Confirmar Senha:</label><br />
+      <input type="password" id="SenhaPessoasConfirm" required /><br />
 
-        <label for="CpfPessoas">CPF:</label><br />
-        <input type="text" id="CpfPessoas"/><br />
+      <label for="TelefonePessoas">Telefone</label><br />
+      <input type="tel" id="TelefonePessoas" required /><br />
 
-        <label for="EnderecoPessoas">Endereço:</label><br />
-        <input type="text" id="EnderecoPessoas"/><br />
+      <label for="CpfPessoas">CPF:</label><br />
+      <input type="text" id="CpfPessoas" required /><br />
 
-        <label for="SituacaoPessoas">Situação:</label>
-        <select id="SituacaoPessoas">
-          <option value="" selected>Selecione</option>
-          <option value="opcao1">A</option>
-          <option value="opcao2">I</option>
-        </select>
-        
+      <label for="genero">Gênero:</label><br />
+      <input type="text" id="GeneroPessoas" required /><br />
+
+      <label for="EnderecoPessoas">Endereço:</label><br />
+      <input type="text" id="EnderecoPessoas" required /><br />
+
+      <label for="TipoPessoas">Tipo:</label><br />
+      <input type="text" id="TipoPessoas" required /><br />
+
+
+      <label for="SituacaoPessoas">Situação:</label>
+      <input type="text" id="SituacaoPessoas" required /><br />
+
           
         <input type="submit" value="Enviar" />
       </form>

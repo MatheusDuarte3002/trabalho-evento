@@ -22,44 +22,12 @@ header {
   top: 0;
 }
 
-header nav {
-  margin-left: 50px;
-}
-
 header img {
-  height: 100px;
+  height: 90px;
   width: auto;
 }
 
 .button {
-  padding: 10px 24px;
-  width: 250px;
-  color: #ffffff;
-  background-color: #4e709c;
-  border-radius: 3px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  border: none;
-  box-shadow: none;
-}
-
-.csv{
-  padding: 10px 24px;
-  width: 250px;
-  color: #ffffff;
-  background-color: #4e709c;
-  border-radius: 3px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  border: none;
-  box-shadow: none;
-}
-
-.pdf{
   padding: 10px 24px;
   width: 250px;
   color: #ffffff;
@@ -172,7 +140,7 @@ form {
   margin: 0 auto;
 }
 
-input[type="text"], [type="date"], [type="name"], [type="tel"], [type="email"], [type="password"], [type="submit"], [type="file"],
+input[type="text"], [type="date"], [type="name"], [type="tel"], [type="email"], [type="password"], [type="submit"],
 select {
   width: 100%;
   padding: 12px;
@@ -203,7 +171,7 @@ input[type="submit"]:hover {
   padding-bottom: 11%;
 }
 
-.table-listarpessoa{
+.table-listarpessoas{
   background-color: #494949;
   width: 180%;
   justify-content: center;
@@ -213,7 +181,8 @@ input[type="submit"]:hover {
 
 .table-listaradmin{
   background-color: #494949;
-  padding: 10px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   color: #ffffff;
   margin: auto;
@@ -221,9 +190,8 @@ input[type="submit"]:hover {
 
 .table-listarevento{
   background-color: #494949;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+  width: 180%;
+  justify-content: center;
+  border-radius: 20px;
   color: #ffffff;
-  margin: auto;
 }

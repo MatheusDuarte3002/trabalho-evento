@@ -23,30 +23,29 @@
   
     <main>
       
-      <form id="formulario" action="" method="post">
+      <form id="formulario" action="/api/cadastrar-evento" method="POST">
         <h2>Cadastrar Evento</h2>
         <label for="Nome">Nome:</label><br />
-        <input type="name" id="name" /><br />
+        <input type="name" id="NomeEvento" /><br />
 
         <label for="Endereco">Endereço:</label><br />
-        <input type="email" id="email"  /><br />
+        <input type="text" id="EnderecoEvento"  /><br />
         
         <label for="Descricao">Descrição:</label><br />
-        <input type="text" id="descricao"/><br />
+        <input type="text" id="DescricaoEvento"/><br />
 
         <label for="DatadeIinico">Data de Inicio:</label><br />
         <input type="date" id="DatadeInicio"/><br />
 
-        <label for="DatadeFim">Data de Fim:</label><br />
+        <label for="DatadeFim">Data de Término:</label><br />
         <input type="date" id="DatadeFim"/><br />
 
+        <label for="PrecoEvento">Preço:</label><br />
+        <input type="text" id="PrecoEvento"/><br />
+
         <label for="Situacao">Situação:</label>
-        <select id="Situacao">
-          <option value="" selected>Selecione</option>
-          <option value="opcao1">A</option>
-          <option value="opcao2">I</option>
-        </select>
-          
+        <input type="text" id="SituacaoEvento"/><br />
+         
         <input type="submit" value="Enviar" />
       </form>
       
@@ -54,6 +53,6 @@
 
     <script src="CadEvento.js"></script>
 
-    <footer class="rodape">Copyright © Crie_TI</footer>
+    <footer class="rodape2">Copyright © Crie_TI</footer>
   </body>
 </html>

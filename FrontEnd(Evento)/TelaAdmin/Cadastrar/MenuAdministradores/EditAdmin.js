@@ -1,49 +1,80 @@
-const apiURL = 'http://localhost:3000/usuarios';
+const apiURL = 'http://localhost:3001/usuarios';
 
-// Obter elementos do DOM
 const selectAdmin = document.getElementById('editar-admin');
 const nomeAdmin = document.getElementById('NomeAdmin');
 const emailAdmin = document.getElementById('EmailAdmin');
-const senhaAdmin = document.getElementById('SenhaAdmin');
-const senhaAdminConfirm = document.getElementById('SenhaAdminConfirm');
+const senhaAdmin = document.getElementById('SenhaAdmin'); // Adicione esta linha se você tiver um campo de senha no seu formulário
 const telefoneAdmin = document.getElementById('TelefoneAdmin');
 const cpfAdmin = document.getElementById('CpfAdmin');
+const generoAdmin = document.getElementById('GeneroAdmin');
 const enderecoAdmin = document.getElementById('EnderecoAdmin');
+const tipoAdmin = document.getElementById('TipoAdmin');
 const situacaoAdmin = document.getElementById('SituacaoAdmin');
 
-// Função para preencher o select com os nomes dos administradores
 async function preencherAdmins() {
   const response = await fetch(apiURL);
-  const admins = await response.json();
+  const usuarios = await response.json();
 
-  admins.forEach(admin => {
-    const option = document.createElement('option');
-    option.value = admin.id;
-    option.text = admin.nome;
-    selectAdmin.appendChild(option);
+  usuarios.forEach(usuario => {
+    if (usuario.tipo == 'admin') {
+      const option = document.createElement('option');
+      option.value = usuario.id;
+      option.text = usuario.nome;
+      selectAdmin.appendChild(option);
+    }
   });
 }
 
-// Função para preencher o formulário com as informações do administrador selecionado
 async function preencherFormulario() {
   const adminId = selectAdmin.value;
-  console.log(adminId)
   const response = await fetch(`${apiURL}/${adminId}`);
-  const admin = await response.json();
-  console.log(admin)
+  const data = await response.json();
+  console.log(data); 
+
+  const admin = data[0]; 
 
   nomeAdmin.value = admin.nome;
   emailAdmin.value = admin.email;
-  senhaAdmin.value = admin.senha;
-  senhaAdminConfirm.value = admin.senha;
+  senhaAdmin.value = admin.senha; // Adicione esta linha se você tiver um campo de senha no seu formulário
   telefoneAdmin.value = admin.telefone;
   cpfAdmin.value = admin.cpf;
+  generoAdmin.value = admin.genero;
   enderecoAdmin.value = admin.endereco;
+  tipoAdmin.value = admin.tipo;
   situacaoAdmin.value = admin.situacao;
 }
 
-// Evento para preencher o formulário quando um administrador é selecionado
-selectAdmin.addEventListener('change', preencherFormulario);
+async function editarAdmin(event) {
+  event.preventDefault(); 
 
-// Preencher o select com os nomes dos administradores ao carregar a página
+  const adminId = selectAdmin.value;
+  const adminInfo = {
+    nome: nomeAdmin.value,
+    email: emailAdmin.value,
+    senha: senhaAdmin.value, // Adicione esta linha se você tiver um campo de senha no seu formulário
+    telefone: telefoneAdmin.value,
+    cpf: cpfAdmin.value,
+    genero: generoAdmin.value,
+    endereco: enderecoAdmin.value,
+    tipo: tipoAdmin.value,
+    situacao: situacaoAdmin.value,
+  };
+
+  const response = await fetch(`${apiURL}/${adminId}`, {
+    method: 'PUT', 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(adminInfo)
+  });
+
+  if (response.ok) {
+    alert('Informações do administrador atualizadas com sucesso!');
+  } else {
+    alert('Erro ao atualizar as informações do administrador.');
+  }
+}
+
+document.getElementById('formulario').addEventListener('submit', editarAdmin);
+selectAdmin.addEventListener('change', preencherFormulario);
 window.addEventListener('load', preencherAdmins);
